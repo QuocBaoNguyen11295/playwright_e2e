@@ -1,0 +1,34 @@
+{
+  "name": "playwright_e2e",
+  "version": "1.0.0",
+  "description": "Automation e2e with playwright",
+  "main": "index.js",
+  "scripts": {
+    "pw:test": "playwright test",
+    "pw:test-chrome": "playwright test --config=playwright.config.ts --project=Chromium",
+    "pw:test-firefox": "playwright test --config=playwright.config.ts --project=Firefox",
+    "pw:test-webkit": "playwright test --config=playwright.config.ts --project=Webkit",
+    "pw:test-report": "playwright test --config=playwright.config.ts --reporter=html",
+    "pw:show-report": "playwright show-report"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/QuocBaoNguyen11295/playwright_e2e.git"
+  },
+  "keywords": [
+    "playwright",
+    "js",
+    "automation",
+    "e2e"
+  ],
+  "author": "Quoc Bao Nguyen",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/QuocBaoNguyen11295/playwright_e2e/issues"
+  },
+  "homepage": "https://github.com/QuocBaoNguyen11295/playwright_e2e#readme",
+  "dependencies": {
+    "@playwright/test": "^1.26.0",
+    "prettier": "^2.7.1"
+  }
+}
