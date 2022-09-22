@@ -6,6 +6,19 @@ test.describe.parallel('Feedback form flow',()=>{
         await loadPage(page)
     })
 
+    test('Reset feedback form',async ({page})=>{
+        await page.click('#feedback')
+        await page.type('#name','Quoc Bao Nguyen')
+        await page.type('#email','nqb11295@gmail.com')
+        await page.type('#subject','Test Feedback')
+        await page.type('#comment','Test Test Test')
+        await page.click('input[value="Clear"]')
+        await expect(page.locator('#name')).toBeEmpty()
+        await expect(page.locator('#email')).toBeEmpty()
+        await expect(page.locator('#subject')).toBeEmpty()
+        await expect(page.locator('#comment')).toBeEmpty()
+    })
+
     test('Submit form',async ({page})=>{
         await page.click('#feedback')
         var name = 'Quoc Bao Nguyen'
