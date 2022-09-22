@@ -1,6 +1,6 @@
 import { test,expect } from '@playwright/test'
 import { loadPage,closePage } from '../helpers/helper'
-test.describe('Login/logout flow',()=>{
+test.describe.parallel('Login/logout flow',()=>{
     test.beforeEach(async ({ page })=>{
         await loadPage(page)
     })
