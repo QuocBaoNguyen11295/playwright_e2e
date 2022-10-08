@@ -5,11 +5,13 @@
   "main": "index.js",
   "scripts": {
     "pw:test": "playwright test",
-    "pw:test-chrome": "playwright test --config=playwright.config.ts --project=Chromium",
-    "pw:test-firefox": "playwright test --config=playwright.config.ts --project=Firefox",
-    "pw:test-webkit": "playwright test --config=playwright.config.ts --project=Webkit",
-    "pw:test-report": "playwright test --config=playwright.config.ts --reporter=html",
-    "pw:show-report": "playwright show-report"
+    "pw:test_chrome": "playwright test --config=playwright.config.ts --project=Chromium --reporter=line",
+    "pw:test_firefox": "playwright test --config=playwright.config.ts --project=Firefox --reporter=line",
+    "pw:test_webkit": "playwright test --config=playwright.config.ts --project=Webkit --reporter=line",
+    "pw:test_report:html": "playwright test --config=playwright.config.ts --reporter=html",
+    "pw:test_report:line": "playwright test --config=playwright.config.ts --reporter=line",
+    "pw:show_report": "playwright show-report",
+    "jenkins-server": "java -jar jenkins.war --httpPort=8080 --enable-future-java"
   },
   "repository": {
     "type": "git",
