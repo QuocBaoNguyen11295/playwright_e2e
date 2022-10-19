@@ -4,14 +4,16 @@
   "description": "Automation e2e with playwright",
   "main": "index.js",
   "scripts": {
-    "pw:test": "playwright test",
-    "pw:test_chrome": "playwright test --config=playwright.config.ts --project=Chromium --reporter=line",
-    "pw:test_firefox": "playwright test --config=playwright.config.ts --project=Firefox --reporter=line",
-    "pw:test_webkit": "playwright test --config=playwright.config.ts --project=Webkit --reporter=line",
+    "pw:test-retries3Times": "playwright test --retries=3",
+    "pw:test": "playwright test --headed",
+    "pw:test_chrome": "playwright test --config=playwright.config.ts --project=Chromium --headed",
+    "pw:test_firefox": "playwright test --config=playwright.config.ts --project=Firefox --headed",
+    "pw:test_webkit": "playwright test --config=playwright.config.ts --project=Webkit --headed",
     "pw:test_report:html": "playwright test --config=playwright.config.ts --reporter=html",
     "pw:test_report:line": "playwright test --config=playwright.config.ts --reporter=line",
     "pw:show_report": "playwright show-report",
-    "jenkins-server": "java -jar jenkins.war --httpPort=8080 --enable-future-java"
+    "jenkins-server": "java -jar jenkins.war --httpPort=8080 --enable-future-java",
+    "pw:generate_pdf": "playwright pdf google.com google_file.pdf"
   },
   "repository": {
     "type": "git",

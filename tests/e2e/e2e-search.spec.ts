@@ -1,5 +1,5 @@
 import {test,expect} from '@playwright/test'
-import {loadPage,closePage} from '../helpers/helper'
+import {loadPage,closePage} from '../../helpers/helper'
 
 test.describe.parallel('Search keyword',()=>{
     test.beforeEach(async({page})=>{

@@ -1,5 +1,5 @@
 import {test,expect} from '@playwright/test'
-import { closePage,loginPageSuccessfully } from '../helpers/helper'
+import { closePage,loginPageSuccessfully } from '../../helpers/helper'
 
 test.describe.parallel('Transfer funds flow',()=>{
     test.beforeEach(async ({page})=>{
